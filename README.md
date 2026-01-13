@@ -70,7 +70,7 @@ The primary challenge was dealing with high volatility in recent weeks (Weeks 50
 ## 2. Architecture Diagram
 The data flow is a linear pipeline designed for rapid inference on a local CPU.
 
-```mermaid
+```text
 [Raw CSV Data] 
        |
        v
@@ -158,6 +158,23 @@ The model output is not used raw. It passes through a robust inference layer:
 
 ## 10. Conclusion
 This solution prioritizes stability and recent trend adaptation over complex deep learning. By acknowledging that agricultural prices have strong serial correlation and momentum, the hybrid approach outperformed pure ML solutions during the volatile final weeks of 2025.
+
+
+### 2. Organize Folder
+Place all downloaded files into the `input/` directory. Your project structure should look like this:
+
+```text
+agribora-maize-price-forecasting/
+├── input/
+│   ├── kamis_maize_prices.csv
+│   ├── agribora_maize_prices.csv
+│   └── ... (other CSV files)
+├── output/
+├── src/
+│   └── main.py
+├── requirements.txt
+└── README.md
+```
 
 ## License
 

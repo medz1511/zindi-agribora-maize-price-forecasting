@@ -1,8 +1,6 @@
-# Ignorer les données (trop lourdes et souvent protégées)
-input/
-output/
-
-# Ignorer les fichiers système et cache Python
+!input/
+output/*
+!output/.gitkeep
 __pycache__/
 *.pyc
 .DS_Store
